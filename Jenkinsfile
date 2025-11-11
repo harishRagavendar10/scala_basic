@@ -24,6 +24,7 @@ pipeline{
                 expression{
                     params.RUN_TEST
             }
+            }
             steps{
                 sh 'sbt test'
             }
@@ -31,4 +32,5 @@ pipeline{
     }
 
 }
+
 
