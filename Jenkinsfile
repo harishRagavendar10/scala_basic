@@ -2,7 +2,7 @@ pipeline{
     agent any
     parameters{
         string(name: 'githubBranch', defaultValue: 'DEVOPS-12', description: 'github branch')
-        booleanParam(name: 'RUN_TEST', defaultvalue: true, description: 'Run test?')
+        booleanParam(name: 'RUN_TEST', defaultValue: true, description: 'Run test?')
         choice(name: 'ENV' , choices: ['DEV','PROD','PP'], description: 'enviroment')
     }
     tools{
@@ -33,6 +33,7 @@ pipeline{
     }
 
 }
+
 
 
 
