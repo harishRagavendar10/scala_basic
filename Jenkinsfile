@@ -15,5 +15,11 @@ pipeline{
             }
 
         }
+        stage("Test"){
+            steps{
+                sh 'sbt test'
+            }
+        }
     }
+
 }
