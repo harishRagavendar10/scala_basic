@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters{
-        booleanParam(name: 'RUN_TEST', defaultvalue: true, description: 'Run test?')
+        booleanParam(name: 'RUN_TEST', defaultValue: true, description: 'Run test?')
         choice(name: 'ENV' , choices: ['DEV','PROD','PP'], description: 'enviroment')
     }
     tools{
@@ -32,5 +32,6 @@ pipeline{
     }
 
 }
+
 
 
