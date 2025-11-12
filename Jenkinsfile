@@ -1,6 +1,7 @@
 pipeline{
     agent any
     parameters{
+        string(name: 'githubBranch', defaultValue: 'DEVOPS-12', description: 'github branch')
         booleanParam(name: 'RUN_TEST', defaultValue: true, description: 'Run test?')
         choice(name: 'ENV' , choices: ['DEV','PROD','PP'], description: 'enviroment')
     }
@@ -10,7 +11,7 @@ pipeline{
     stages{
         stage("Checkout"){
             steps{
-                checkout scm
+                git branch: "${params.githubBranch}", url: 'https://github.com/harishRagavendar10/scala_basic.git'
             }
         }
         stage("Build"){
@@ -32,6 +33,7 @@ pipeline{
     }
 
 }
+
 
 
 
